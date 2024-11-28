@@ -3,8 +3,13 @@
 ## In your cmssw area src folder
 ```
 cmsenv;
-
-git clone git@github.com:vince502/ResonanceAna.git -b master
+git cms-init
+git remote add dilepton git@github.com:CMS-HIN-dilepton/OniaTreeSubmodule.git
+git fetch dilepton
+git checkout dilepton/CMSSW_14_1_X HiAnalysis
+git checkout dilepton/CMSSW_14_1_X HiSkim
+git checkout dilepton/CMSSW_14_1_X HeavyIonsAnalysis
+git clone git@github.com:vince502/ResonanceAna.git -b master VertexCompositeAnalysis
 
 scram b -j8
 ```
